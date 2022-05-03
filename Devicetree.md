@@ -1,6 +1,6 @@
 
 ### Linux 使用DT的三个主要目的
-1. 平台识别  
+#### 1. 平台识别  
 
 函数|用途 |路径
 --|--|--
@@ -9,7 +9,7 @@ setup_machine_fdt()|搜索并选择最匹配的DT node| arch/arm/kernel/devtree.
 struct machine_desc属性dt_compat|存放compatible|
 DTS|设备节点compatiable| arch/arm/boot/dts/xxx.dts
 
-1. 运行时配置
+#### 2. 运行时配置
 
 在早期启动期间
 函数| 作用
@@ -27,7 +27,7 @@ chosen {
         initrd-end = <0xc8200000>;
 };
 ```
-1. 设备人口
+#### 3. 设备人口
 
 在 .init_machine() 时，Tegra 板支持代码将需要查看此 DT 并决定为哪些节点创建 platform_devices。
 但是，查看树，并不能立即看出每个节点代表什么样的设备，或者即使一个节点根本代表一个设备。
