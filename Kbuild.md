@@ -6,3 +6,5 @@
 [coreboot-ebuild](https://chromium-review.googlesource.com/c/chromiumos/overlays/chromiumos-overlay/+/1840032) 
 
 ## Reference
+- [wiki](https://elinux-org.translate.goog/Device_Tree_Usage?_x_tr_sl=auto&_x_tr_tl=zh-CN&_x_tr_hl=zh-CN&_x_tr_pto=wapp)
+
