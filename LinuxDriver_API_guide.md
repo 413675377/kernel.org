@@ -1,4 +1,4 @@
-![device_driver](.\img\device_driver.png)
+![device_driver](./img/device_driver.png)
 
 ## 系统文件
 ```
