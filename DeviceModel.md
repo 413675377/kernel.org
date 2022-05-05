@@ -1,6 +1,4 @@
-Linux设备模型
-
-
+## Linux设备模型
 
 <img src="./img/device_driver.png" alt="img" style="zoom:45%;" />
 
