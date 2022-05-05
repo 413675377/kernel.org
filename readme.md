@@ -24,4 +24,7 @@ kernel.org
 
 #### Target
 - 根据完整的笔记本电路原理图，理清代码逻辑
+
 - 能够bringup，develop，maintain a board
+
+[Plan](ChromebookTextbook.html)
