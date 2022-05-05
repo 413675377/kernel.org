@@ -2,7 +2,7 @@ Linux设备模型
 
 
 
-![img](./img/device_driver.png)
+<img src="./img/device_driver.png" alt="img" style="zoom:45%;" />
 
 ## Linux sysfs
 ```
