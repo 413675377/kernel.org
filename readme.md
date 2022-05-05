@@ -7,11 +7,11 @@ Date：2022-05-03 start
 
 #### 任务
 
-- DTS使用
+- [DTS使用](Devicetree.md)
 - Linux Input子系统
-- ALSA子系统分析
+- [ALSA子系统分析ALSA.md](ALSA.md)
 - Zephyr RTOS代码分析
-- 结合实例，
+- 结合实例
 - 会使用Linux Driver API
 
 #### 目标
