@@ -7,14 +7,14 @@ $ tree kernel.org/
 kernel.org  
 ├── [API.md](API.md)  
 ├── [ALSA.md](ALSA.md)   
-├── [DeviceModel.md ](DeviceModel.md)  
+├── [DriverModel.md ](DriverModel.md)  
 ├── [Devicetree.md](Devicetree.md)  
 ├── [DriverPorting.md](DriverPorting.md)   
 ├── [Kbuild.md](Kbuild.md)   
 
 ==TODO==  
 
-- [ ] Coachz audio 实现逻辑 [on-going]
+- [ ] [CoachZ Sound Driver](CoachZ Sound Driver.html) [on-going]
 - [ ] Device class
 - [ ] Linux Input子系统
 - [ ] Zephyr RTOS代码分析

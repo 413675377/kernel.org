@@ -1,4 +1,4 @@
-## Linux设备模型
+## Linux驱动模型
 
 <img src="./img/device_driver.png" alt="img" style="zoom:45%;" />
 
@@ -18,5 +18,4 @@
 ```
 
 ## Example  ==TODO==
-
 
