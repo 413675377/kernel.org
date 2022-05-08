@@ -80,7 +80,7 @@ static struct platform_driver [sc7180_snd_driver](https://elixir.bootlin.com/lin
 module_platform_driver(sc7180_snd_driver); //2. 注册driver到总线, probe，创建device node
 ```
 
-解析：**`[module_platform_driver](https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L402)**(**[sc7180_snd_driver](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/sc7180_snd_driver)**);`
+解析：[module_platform_driver](https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L402)(sc7180_snd_driver);
 
 1. **`[module_driver](https://elixir.bootlin.com/linux/v5.18-rc5/source/include/linux/device/driver.h#L259)**(__platform_driver, **[platform_driver_register](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/platform_driver_register)**,`**`[platform_driver_unregister](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/platform_driver_unregister)**)`
 2. **`[__platform_driver_register](https://elixir.bootlin.com/linux/v5.18-rc5/source/include/linux/platform_device.h#L223)**(struct **[platform_driver](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/platform_driver)** *,``struct **[module](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/module)** ***[owner](https://elixir.bootlin.com/linux/v5.18-rc5/C/ident/owner)**)`

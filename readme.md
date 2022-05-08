@@ -26,7 +26,7 @@ $ tree kernel.org/
 
 ### Code阅读方法
 1. 解决的问题
-2. Code追踪，（查API）
+2. Code追踪（了解系统框架，查API）
 3. 画流程
 4. 实验
 
