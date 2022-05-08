@@ -4,9 +4,9 @@ Date：2022-05-03 start
 本仓库主要内容是简化Linux Kernel[官方文档](https://www.kernel.org/doc/html/latest/)，降低Linux Kernel学习难度，仅此而已！
 
 ### Recommand
-API search:  [https://www.kernel.org/doc/html/latest/](https://www.kernel.org/doc/html/latest/)   
-Code browser: [https://elixir.bootlin.com/linux/v5.18-rc5/source](https://elixir.bootlin.com/linux/v5.18-rc5/source)    
-CS Lesson：[https://linux-kernel-labs.github.io/refs/heads/master/so2/index.html](https://linux-kernel-labs.github.io/refs/heads/master/so2/index.html)    
+API [search](https://www.kernel.org/doc/html/latest/)    
+Code [browser](https://elixir.bootlin.com/linux/v5.18-rc5/source)    
+CS [Lesson](https://linux-kernel-labs.github.io/refs/heads/master/so2/index.html)    
 
 $ tree kernel.org/     
 ├── [Kbuild.md](Kbuild.md)   
