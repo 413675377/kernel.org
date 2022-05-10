@@ -666,7 +666,7 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="4b9948e5-9e9a-4c43-8097-4ffcb5a8cc97" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_space_shuttle_challenger.jpg" style="object-position:center 8.599999999999996%"/><h1 class="page-title">CoachZ Sound Driver</h1></header><div class="page-body"><nav id="aa56a0cc-c853-4056-8004-25677b38c975" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#54c91bbe-4861-41e2-923f-8c0a8cf8d4af">Question</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f8c39cc9-aed3-4cc7-887b-58047779abdf">Hardware</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#010670cd-c1e5-4226-af4d-19c9e618334d">Software</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#57c31f40-687b-4284-9cde-c19734116932">Tracking <code>$sound</code> in dts</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1fe7e493-651a-4393-8e66-56a5a64947a6">platform_device &amp; platform_data</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#b646ec85-fc52-45e2-ad3c-f34b83b36def">Machine driver</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#59162d43-27a4-4ac6-b210-7084e180cb56">Tracking <strong><code>struct of_device_id sc7180_snd_device_id[]</code></strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3e84304c-d4c9-4517-a2c3-0fe651b8c091">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L402"><code><strong>module_platform_driver</strong></code></a><code><strong>(sc7180_snd_driver)</strong></code><code>;</code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#73f367cd-d8dc-47df-8007-7f3ab4e40a94">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L395"><code><strong>sc7180_snd_platform_probe</strong></code></a></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#74b6b1fc-0fda-4b1f-96da-d9cd3b09bf55">Tracking <code>struct</code><code><strong><em>snd_soc_dai_link</em></strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#4d1e98d9-dbc4-457d-9714-59ca7521d9d1">Codec driver</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#2ba68e74-553d-4f87-943c-a8fefd571360">CPU driver</a></div></nav><h2 id="54c91bbe-4861-41e2-923f-8c0a8cf8d4af" class="">Question</h2><ul id="a90a14c2-d165-4f4f-b94d-7e438fde5e64" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Which drivers do we need?</span></li></ul><ul id="6ef0e127-53ea-4123-bbbc-cb4b01905a23" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How to register a driver?</span></li></ul><ul id="bf56e361-a4a0-4dfd-a8b7-4397a8a913dc" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">How to register a device?</span></li></ul><ul id="003914c3-c720-418b-9387-807b0f5100ed" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How probe work?</span></li></ul><ul id="16c88074-746f-4a52-97d5-137d238542fe" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Where platform_device and platform_data come from?</span></li></ul><ul id="7b1f806d-a7d7-4e06-ac92-010ffdc353dd" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How to link codec and CPU in Machine driver?</span></li></ul><ul id="838cc9ce-5ee3-41bb-9909-f82b04088525" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">How to write probe，remove，shutdown，suspend？</span></li></ul><ul id="fc019302-ad49-4819-bcd1-3d818e6c4ac0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">How to use controls, route, widgets?</span></li></ul><h2 id="f8c39cc9-aed3-4cc7-887b-58047779abdf" class="">Hardware</h2><div id="296cc73f-0293-4099-bd8f-d49f85580d28" class="column-list"><div id="5b67af03-2e04-40ed-aab3-c1786ac8cfc0" style="width:31.25%" class="column"><p id="b6503418-ed38-42bf-bfea-fff02c457917" class="">CPU: sc7180</p><p id="5f41e369-55aa-437a-a4ad-1ff89def883c" class="">Codec: adau7002(ALC5682)</p><p id="4cfcb2f7-42b3-4d5b-94da-32fb5c1e147e" class="">DAI: I2S</p><p id="e6f90cd4-63d3-4df0-b5c8-d4e54a0cbbbf" class="">Amplifier: max98357a</p></div><div id="82e1a436-441c-4cc9-b86c-d255147048a7" style="width:68.75%" class="column"><figure id="56c8c25e-b067-43f6-a489-d724eb54fe2d" class="image"><a href="img/Untitled.png"><img style="width:384px" src="img/Untitled.png"/></a></figure></div></div><p id="20e1dabb-b546-4ae8-9a6e-421672d808cf" class=""><strong>Answer</strong>: What drivers do we need?</p><h2 id="010670cd-c1e5-4226-af4d-19c9e618334d" class="">Software</h2><p id="64da9f41-b220-49e6-b34d-c6da075312c7" class="">DTS: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts">arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts</a></p><p id="772cf105-4e6b-4665-b1d2-69b64928aeb6" class="">Machine driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c">sound/soc/qcom/sc7180.c</a></p><p id="c1ca62d9-d232-4135-9a92-4de316fc7d0d" class="">CPU driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/lpass-sc7180.c">sound/soc/qcom/lpass-sc7180.c</a></p><p id="8ba7fe95-7f32-4110-b785-15376a64c8e3" class="">Codec driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/codecs/adau7002.c">sound/soc/codecs/adau7002.c</a></p><p id="900b559b-a536-4275-9e9c-d14cf76d7a59" class="">Note： Kernel version: ChromiumOS: v5.4,  Upstream: v5.18</p><h3 id="57c31f40-687b-4284-9cde-c19734116932" class="">Tracking <code>$sound</code> in dts</h3><pre id="182d8ed0-a766-4be2-8506-c3eeb406899f" class="code"><code>//origin
+</style></head><body><article id="4b9948e5-9e9a-4c43-8097-4ffcb5a8cc97" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_space_shuttle_challenger.jpg" style="object-position:center 8.599999999999996%"/><h1 class="page-title">CoachZ Sound Driver</h1></header><div class="page-body"><nav id="aa56a0cc-c853-4056-8004-25677b38c975" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#54c91bbe-4861-41e2-923f-8c0a8cf8d4af">Question</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f8c39cc9-aed3-4cc7-887b-58047779abdf">Hardware</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#010670cd-c1e5-4226-af4d-19c9e618334d">Source</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#57c31f40-687b-4284-9cde-c19734116932">DTS</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5877a503-694b-4377-af41-763a03401751">Tracking <code>$sound</code> in dts</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#1fe7e493-651a-4393-8e66-56a5a64947a6">platform_device &amp; platform_data</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#dca089e2-828d-4bd4-b229-7881f2cb45fe">Tracking <a href="https://elixir.bootlin.com/linux/latest/source/drivers/of/fdt.c#L285"><code>unflatten_dt_nodes(blob, mem, dad, mynodes);</code></a></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#88dc26f9-6c0e-43f3-9fd6-6086d70ade91"><a href="https://01.org/linuxgraphics/gfx-docs/drm/driver-api/driver-model/platform.html#early-platform-devices-and-drivers"><strong><strong>Early Platform Devices and Drivers</strong></strong></a><strong><strong>   </strong></strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#871cb668-7971-4d14-98f3-565294587328">Tracking <code><a href="https://elixir.bootlin.com/linux/v5.18-rc6/source/arch/arm64/kernel/setup.c#L324">parse_early_param();</a></code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#716815bf-83e7-4b68-8a69-c01035109d84">Tracking <code><a href="https://elixir.bootlin.com/linux/v5.18-rc6/source/arch/arm64/kernel/acpi.c#L64">early_param</a></code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#dbd1eeca-1e7a-4471-b332-c56f15cf2563">Machine driver</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#59162d43-27a4-4ac6-b210-7084e180cb56">Tracking <strong><code>struct of_device_id sc7180_snd_device_id[]</code></strong></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#3e84304c-d4c9-4517-a2c3-0fe651b8c091">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L402"><code><strong>module_platform_driver</strong></code></a><code><strong>(sc7180_snd_driver)</strong></code><code>;</code></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#73f367cd-d8dc-47df-8007-7f3ab4e40a94">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L395"><code><strong>sc7180_snd_platform_probe</strong></code></a></a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#74b6b1fc-0fda-4b1f-96da-d9cd3b09bf55">Tracking <code>struct</code><code><strong><em>snd_soc_dai_link</em></strong></code></a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4d1e98d9-dbc4-457d-9714-59ca7521d9d1">CPU driver</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#991343d2-944f-4ae4-a0dd-f7ce92e0ac34">Codec driver</a></div></nav><h2 id="54c91bbe-4861-41e2-923f-8c0a8cf8d4af" class="">Question</h2><ul id="a90a14c2-d165-4f4f-b94d-7e438fde5e64" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Which drivers do we need?</span></li></ul><ul id="6ef0e127-53ea-4123-bbbc-cb4b01905a23" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How to register a driver?</span></li></ul><ul id="bf56e361-a4a0-4dfd-a8b7-4397a8a913dc" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How to register a device?</span></li></ul><ul id="003914c3-c720-418b-9387-807b0f5100ed" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How probe work?</span></li></ul><ul id="16c88074-746f-4a52-97d5-137d238542fe" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">Where platform_device and platform_data come from?</span></li></ul><ul id="7b1f806d-a7d7-4e06-ac92-010ffdc353dd" class="to-do-list"><li><div class="checkbox checkbox-on"></div> <span class="to-do-children-checked">How to link codec and CPU in Machine driver?</span></li></ul><ul id="838cc9ce-5ee3-41bb-9909-f82b04088525" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">How to write probe，remove，shutdown，suspend？</span></li></ul><ul id="fc019302-ad49-4819-bcd1-3d818e6c4ac0" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked">How to use controls, route, widgets?</span></li></ul><h2 id="f8c39cc9-aed3-4cc7-887b-58047779abdf" class="">Hardware</h2><div id="296cc73f-0293-4099-bd8f-d49f85580d28" class="column-list"><div id="5b67af03-2e04-40ed-aab3-c1786ac8cfc0" style="width:31.25%" class="column"><p id="b6503418-ed38-42bf-bfea-fff02c457917" class="">CPU: sc7180</p><p id="5f41e369-55aa-437a-a4ad-1ff89def883c" class="">Codec: adau7002(ALC5682)</p><p id="4cfcb2f7-42b3-4d5b-94da-32fb5c1e147e" class="">DAI: I2S</p><p id="e6f90cd4-63d3-4df0-b5c8-d4e54a0cbbbf" class="">Amplifier: max98357a</p></div><div id="82e1a436-441c-4cc9-b86c-d255147048a7" style="width:68.75%" class="column"><figure id="56c8c25e-b067-43f6-a489-d724eb54fe2d" class="image"><a href="img/Untitled.png"><img style="width:384px" src="img/Untitled.png"/></a></figure></div></div><p id="20e1dabb-b546-4ae8-9a6e-421672d808cf" class=""><strong>Answer</strong>: What drivers do we need?</p><h2 id="010670cd-c1e5-4226-af4d-19c9e618334d" class="">Source</h2><p id="64da9f41-b220-49e6-b34d-c6da075312c7" class="">DTS: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts">arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts</a></p><p id="772cf105-4e6b-4665-b1d2-69b64928aeb6" class="">Machine driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c">sound/soc/qcom/sc7180.c</a></p><p id="c1ca62d9-d232-4135-9a92-4de316fc7d0d" class="">CPU driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/lpass-sc7180.c">sound/soc/qcom/lpass-sc7180.c</a></p><p id="8ba7fe95-7f32-4110-b785-15376a64c8e3" class="">Codec driver: <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/codecs/adau7002.c">sound/soc/codecs/adau7002.c</a></p><p id="900b559b-a536-4275-9e9c-d14cf76d7a59" class="">Note： Kernel version: ChromiumOS: v5.4,  Upstream: v5.18</p><h2 id="57c31f40-687b-4284-9cde-c19734116932" class="">DTS</h2><h3 id="5877a503-694b-4377-af41-763a03401751" class="">Tracking <code>$sound</code> in dts</h3><pre id="182d8ed0-a766-4be2-8506-c3eeb406899f" class="code"><code>//origin
 arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts
 
 //label sc7180-trogdor-coachz.dtsi
@@ -712,8 +712,91 @@ lpass_cpu: lpass@62d87000 {
 			reg = &lt;0 0x62d87000 0 0x68000&gt;, &lt;0 0x62f00000 0 0x29000&gt;;
 			reg-names =  &quot;lpass-hdmiif&quot;, &quot;lpass-lpaif&quot;;</code></pre><p id="be69c941-dd99-4426-af3e-32a25349c2e5" class="">
 </p><h3 id="1fe7e493-651a-4393-8e66-56a5a64947a6" class="">platform_device &amp; platform_data</h3><p id="ac71fe2a-2f94-4037-9268-af8538eefb42" class="">platform device specific data while probing comes from the platform setup code or from <strong>device tree</strong>. you can find the related code in <strong>arch/arm/borad/device</strong> files <strong>struct platform_device</strong> embedded with <strong>platform_data structure</strong> where you will pass the platform related data to the drivers.</p><p id="5d6dc0c9-6276-4fac-b373-32d635c40ad0" class="">in modern kernels platform data is passed to device drivers through device tree. device tree can be found in <strong>/arch/arm/boot/dts/your_device</strong></p><p id="b5f3fa30-7cf8-4a3f-bd2e-ed9107b47371" class=""><strong>Answer</strong>: <a href="https://stackoverflow.com/questions/37110495/where-the-probe-functions-argument-comes-from"><strong>Where platform device &amp; platform data come from?</strong></a></p><p id="2f80e766-de4d-4b8f-93db-3c2b76d8ef6f" class="">
-</p><h3 id="b646ec85-fc52-45e2-ad3c-f34b83b36def" class="">Machine driver</h3><p id="748b879b-975c-466d-9481-354f75550952" class="">主要负责Codec，Platform，DAI之间的耦合, Machine 驱动的设备初始化代码无非就是选择合适 Platform 和 Codec 以及 dai，用他们填充以上几个数据结构，然后注册Platform设备即可,当然还要实现连接 Platform 和 Codec的dai_link对应的 ops 实现.</p><p id="1691de76-c6d9-4fca-bf96-bcf72a7d569d" class="">
-</p><h3 id="59162d43-27a4-4ac6-b210-7084e180cb56" class="">Tracking <strong><code>struct of_device_id sc7180_snd_device_id[]</code></strong></h3><pre id="cbe171b3-9503-42d7-a9b3-22acb33803a3" class="code code-wrap"><code>static const struct of_device_id sc7180_snd_device_id[]  = {
+</p><h3 id="dca089e2-828d-4bd4-b229-7881f2cb45fe" class="">Tracking <a href="https://elixir.bootlin.com/linux/latest/source/drivers/of/fdt.c#L285"><code>unflatten_dt_nodes(blob, mem, dad, mynodes);</code></a></h3><pre id="dd6155ea-221e-451d-8365-e0b1a677f6ae" class="code"><code>//call init/main.c
+start_kernel(void)
+
+//jump1
+setup_arch(&amp;command_line);
+unflatten_device_tree();
+
+//jump2
+__unflatten_device_tree(initial_boot_params, NULL, &amp;of_root,
+				early_init_dt_alloc_memory_arch, false);
+//jump3
+unflatten_dt_nodes(blob, mem, dad, mynodes);
+
+//jump4
+populate_node(blob, offset, &amp;mem, nps[depth],
+				   &amp;nps[depth+1], dryrun);
+
+//sysfs: /proc/device-tree</code></pre><p id="384fd52d-0917-410a-af24-581793a85e4e" class="">
+</p><h3 id="88dc26f9-6c0e-43f3-9fd6-6086d70ade91" class=""><a href="https://01.org/linuxgraphics/gfx-docs/drm/driver-api/driver-model/platform.html#early-platform-devices-and-drivers"><strong><strong>Early Platform Devices and Drivers</strong></strong></a><strong><strong>   </strong></strong></h3><p id="3a6fe1de-87be-4220-9fdb-306ffc6b0d61" class="">The early platform interfaces provide platform data to platform device drivers early on during the system boot. The code is built on top of the early_param() command line parsing and can be executed very early on. more info refer to linux/platform_device.h</p><p id="f4d59b93-331d-48f3-b863-fc7c79e41cec" class="">#Seems out of date, not suit for v5.18</p><pre id="69e92cfb-f9ff-4140-aea7-a2cb572eea80" class="code"><code>//1. Registering early platform device data
+early_platform_add_devices()
+
+//2. Parsing kernel command line
+parse_early_param()
+early_param()
+
+//3. Installing early platform drivers belonging to a certain class
+early_platform_driver_register_all()
+
+//4. Early platform driver registration
+early_platform_init()
+
+//5. Probing of early platform drivers belonging to a certain class
+early_platform_driver_probe()
+
+//6. Inside the early platform driver probe()
+is_early_platform_device()</code></pre><p id="9e90a0ca-d682-49a3-8c18-f55315476ccc" class="">
+</p><h3 id="871cb668-7971-4d14-98f3-565294587328" class="">Tracking <code><a href="https://elixir.bootlin.com/linux/v5.18-rc6/source/arch/arm64/kernel/setup.c#L324">parse_early_param();</a></code></h3><pre id="fc7a750e-6e7e-445f-98ba-289a4cf1f727" class="code"><code>//call
+start_kernel(void)
+
+//jump1
+parse_early_param();
+
+//jump2
+parse_early_options(tmp_cmdline);
+
+//jump3
+parse_args(&quot;early options&quot;, cmdline, NULL, 0, 0, 0, NULL,
+		   do_early_param);
+
+//define
+struct obs_kernel_param {
+	const char *str;
+	int (*setup_func)(char *);
+	int early;
+};
+
+//jump4 do_early_param
+const struct obs_kernel_param *p;
+...
+setup_func(val) != 0</code></pre><p id="28a8f213-86e3-4dad-94f9-e21076531a46" class="">
+</p><h3 id="716815bf-83e7-4b68-8a69-c01035109d84" class="">Tracking <code><a href="https://elixir.bootlin.com/linux/v5.18-rc6/source/arch/arm64/kernel/acpi.c#L64">early_param</a></code></h3><pre id="87a78e52-0f6a-4689-832a-f6eaf823cc75" class="code"><code>//call
+early_param(&quot;acpi&quot;, parse_acpi);
+early_param(&quot;bootconfig&quot;, warn_bootconfig);
+early_param(&quot;loglevel&quot;, loglevel);
+early_param(&quot;randomize_kstack_offset&quot;, early_randomize_kstack_offset);
+early_param(&quot;memblock&quot;, early_memblock);
+...
+
+//define
+#define early_param(str, fn)  __setup_param(str, fn, fn, 1)
+
+#define __setup_param(str, unique_id, fn, early)			\
+	static const char __setup_str_##unique_id[] __initconst		\
+		__aligned(1) = str; 					\
+	static struct obs_kernel_param __setup_##unique_id		\
+		__used __section(&quot;.init.setup&quot;)				\
+		__aligned(__alignof__(struct obs_kernel_param))		\
+		= { __setup_str_##unique_id, fn, early }
+
+struct obs_kernel_param {
+	const char *str;
+	int (*setup_func)(char *);
+	int early;
+};</code></pre><p id="bc1e7fa4-ed7a-470b-9759-15268317c7fe" class="">
+</p><h2 id="dbd1eeca-1e7a-4471-b332-c56f15cf2563" class="">Machine driver</h2><p id="748b879b-975c-466d-9481-354f75550952" class="">主要负责Codec，Platform，DAI之间的耦合, Machine 驱动的设备初始化代码无非就是选择合适 Platform 和 Codec 以及 dai，用他们填充以上几个数据结构，然后注册Platform设备即可,当然还要实现连接 Platform 和 Codec的dai_link对应的 ops 实现.</p><h3 id="59162d43-27a4-4ac6-b210-7084e180cb56" class="">Tracking <strong><code>struct of_device_id sc7180_snd_device_id[]</code></strong></h3><pre id="cbe171b3-9503-42d7-a9b3-22acb33803a3" class="code code-wrap"><code>static const struct of_device_id sc7180_snd_device_id[]  = {
 	{.compatible = &quot;google,sc7180-trogdor&quot;},
 	{.compatible = &quot;google,sc7180-coachz&quot;},
 	{},
@@ -728,7 +811,7 @@ static struct platform_driver sc7180_snd_driver = {
 		.pm = &amp;snd_soc_pm_ops,
 	},
 };
-module_platform_driver(sc7180_snd_driver); //2. 注册driver到总线, probe，创建device node</code></pre><p id="5e0caea0-f548-4b44-bad8-863826b14624" class=""><strong>Answer: How to bind and broadcast in driver?</strong></p><p id="22eecdc9-0418-4b10-9483-22f06365e4af" class="">
+module_platform_driver(sc7180_snd_driver); //2. 注册driver到总线, probe，创建device node</code></pre><p id="5e0caea0-f548-4b44-bad8-863826b14624" class=""><strong>Answer: How to bind and broadcast in driver?</strong></p><p id="bf5600c8-7eb3-412c-be84-3b67f9f83bae" class="">
 </p><h3 id="3e84304c-d4c9-4517-a2c3-0fe651b8c091" class="">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L402"><code><strong>module_platform_driver</strong></code></a><code><strong>(sc7180_snd_driver)</strong></code><code>;</code></h3><pre id="3de1c9c2-b33f-4a7b-97bb-6455cc1fed93" class="code"><code>//call 
 module_platform_driver(sc7180_snd_driver);
 
@@ -762,8 +845,7 @@ call_driver_probe(dev, drv);
 
 //jump finish
 dev-&gt;bus-&gt;probe(dev);
-drv-&gt;probe(dev);</code></pre><p id="ba800d28-639e-4bb6-a8b7-bef7ef1cba05" class=""><strong>Answer</strong>:  <a href="https://stackoverflow.com/questions/22722520/who-calls-probe-function-in-driver-code"><strong>Who calls &quot;probe&quot; function in driver code?</strong></a></p><p id="0c0af901-2d2e-404f-9466-fbede94699a9" class="">
-</p><h3 id="73f367cd-d8dc-47df-8007-7f3ab4e40a94" class="">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L395"><code><strong>sc7180_snd_platform_probe</strong></code></a></h3><pre id="668c121c-abd5-4e64-9407-9aefb4196bef" class="code"><code>//call
+drv-&gt;probe(dev);</code></pre><p id="ba800d28-639e-4bb6-a8b7-bef7ef1cba05" class=""><strong>Answer</strong>:  <a href="https://stackoverflow.com/questions/22722520/who-calls-probe-function-in-driver-code"><strong>Who calls &quot;probe&quot; function in driver code?</strong></a></p><h3 id="73f367cd-d8dc-47df-8007-7f3ab4e40a94" class="">Tracking <a href="https://elixir.bootlin.com/linux/v5.18-rc5/source/sound/soc/qcom/sc7180.c#L395"><code><strong>sc7180_snd_platform_probe</strong></code></a></h3><pre id="668c121c-abd5-4e64-9407-9aefb4196bef" class="code"><code>//call
 sc7180_snd_platform_probe
 
 //jump1
@@ -783,7 +865,7 @@ soc_init_card_debugfs(card);
 snd_soc_dapm_new_controls(&amp;card-&gt;dapm, card-&gt;dapm_widgets,
 snd_soc_card_probe(card);
 soc_probe_link_components(card);
-soc_probe_link_dais(card);</code></pre><p id="995f6b22-8d1d-48cd-9698-14ebc23c0224" class="">
+soc_probe_link_dais(card);</code></pre><p id="f445ff00-a2d6-4ea5-b17b-e38e710cdb05" class="">
 </p><h3 id="74b6b1fc-0fda-4b1f-96da-d9cd3b09bf55" class="">Tracking <code>struct</code><code><strong><em>snd_soc_dai_link</em></strong></code></h3><pre id="1630b39e-a4cb-4ab1-a3d9-6a802836d76e" class="code"><code>//call
 sc7180_snd_platform_probe(struct platform_device *pdev)
 
@@ -798,8 +880,10 @@ sc7180_adau7002_snd_startup(struct snd_pcm_substream *substream)
 ...
 struct snd_soc_dai *cpu_dai = asoc_rtd_to_cpu(rtd, 0); //link to cpu dai driver
 struct snd_soc_dai *codec_dai = asoc_rtd_to_codec(rtd, 0);//link codec dai driver</code></pre><p id="1344f9b3-af38-4c20-b838-e22efbe14861" class=""><strong>Answer: How to link the CPU and Codec in Machine driver?</strong></p><p id="d7c602ec-87bd-45ad-958d-ae2a6bbb52f1" class="">
-</p><h3 id="4d1e98d9-dbc4-457d-9714-59ca7521d9d1" class="">Codec driver</h3><p id="c44c963f-2d3a-400e-918d-c5abce749c0e" class="">
-</p><h3 id="2ba68e74-553d-4f87-943c-a8fefd571360" class="">CPU driver</h3><p id="b8c6eb82-ecca-4ae1-84bc-425978484bbb" class="">
+</p><h2 id="4d1e98d9-dbc4-457d-9714-59ca7521d9d1" class="">CPU driver</h2><p id="0656d0bd-e95c-4102-aeb4-f07a94f6630a" class="">
+</p><h2 id="991343d2-944f-4ae4-a0dd-f7ce92e0ac34" class="">Codec driver</h2><p id="c44c963f-2d3a-400e-918d-c5abce749c0e" class="">
+</p><p id="2ba68e74-553d-4f87-943c-a8fefd571360" class="">
+</p><p id="b8c6eb82-ecca-4ae1-84bc-425978484bbb" class="">
 </p><p id="bbcceacf-c614-4c9f-8b18-c8300cfe6561" class="">
 </p><p id="64014c29-92f6-48c1-a1b2-eab47bc5da9d" class="">
 </p><p id="5accb9f0-9594-4ab8-8652-c03a0338ab5b" class="">

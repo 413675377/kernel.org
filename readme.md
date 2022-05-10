@@ -6,7 +6,8 @@ Date：2022-05-03 start
 ### Recommand
 API [search](https://www.kernel.org/doc/html/latest/)    
 Code [browser](https://elixir.bootlin.com/linux/v5.18-rc5/source)    
-CS [Lesson](https://linux-kernel-labs.github.io/refs/heads/master/so2/index.html)    
+CS [Lesson](https://linux-kernel-labs.github.io/refs/heads/master/so2/index.html)     
+Bootlin [doc](https://bootlin.com/doc/training/linux-kernel/)  
 
 $ tree kernel.org/     
 ├── [Kbuild.md](Kbuild.md)   
@@ -14,10 +15,9 @@ $ tree kernel.org/
 ├── [DriverModel.md ](DriverModel.md)   
 ├── [DriverPorting.md](DriverPorting.md)   
 ├── [ALSA.md](ALSA.md)   
-├── [ALSA: CoachZ audio driver](Driver_Audio_CoachZ.md)  [on-going] 
+├── [ALSA: CoachZ audio driver](CoachZ Sound Driver.html)   
 
 ==TODO==  
-- [ ] [CoachZ Sound Driver](CoachZ Sound Driver.html) [on-going]
 - [ ] Device class
 - [ ] Linux Input子系统
 - [ ] Zephyr RTOS代码分析
