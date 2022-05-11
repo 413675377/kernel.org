@@ -15,7 +15,7 @@ $ tree kernel.org/
 ├── [DriverModel.md ](DriverModel.md)   
 ├── [DriverPorting.md](DriverPorting.md)   
 ├── [ALSA.md](ALSA.md)   
-├── [ALSA: CoachZ audio driver](CoachZ Sound Driver.html)   
+├── [ALSA: AudioDriver](AudioDriver.html)   
 
 ==TODO==  
 - [ ] Device class
