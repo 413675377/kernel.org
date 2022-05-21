@@ -2,7 +2,7 @@
 
 
 ## Framwork
-<img src="D:\Code\project\kernel.org\img\Input_System.png" alt="input_subsystem" style="zoom:50%;" />
+<img src="img\Input_System.png" alt="input_subsystem" style="zoom:50%;" />
 
 
 
