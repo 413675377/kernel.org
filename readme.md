@@ -15,11 +15,14 @@ $ tree kernel.org/
 ├── [DriverModel.md ](DriverModel.md)   
 ├── [DriverPorting.md](DriverPorting.md)   
 ├── [ALSA.md](ALSA.md)   
-├── [ALSA: AudioDriver](AudioDriver.html)   
+├── [ALSA: AudioDriver](AudioDriver.html)     
+├── [Input.md](Input.md)    
+
+
 
 ==TODO==  
 - [ ] Device class
-- [ ] Linux Input子系统
+- [ ] Linux Input子系统  -- on-going
 - [ ] Zephyr RTOS代码分析
 - [ ] 会使用Linux Driver API
 - [ ] [AI Plan](ChromebookTextbook.html)
