@@ -6,6 +6,18 @@
 
 
 
+input_allocate_device()
+
+input_register_device  
+
+button_interrupt()
+
+input_report_key()
+
+
+
+
+
 
 ### Reference
 1. https://www.kernel.org/doc/html/latest/input/index.html
