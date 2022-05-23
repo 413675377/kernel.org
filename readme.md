@@ -21,10 +21,12 @@ $ tree kernel.org/
 
 
 ==TODO==  
+
+- [ ] Input Subsystem  -- on-going
+- [ ] I2C Subsystem
 - [ ] Device class
-- [ ] Linux Input子系统  -- on-going
-- [ ] Zephyr RTOS代码分析
-- [ ] 会使用Linux Driver API
+- [ ] Zephyr RTOS
+- [ ] Driver API
 - [ ] [AI Plan](ChromebookTextbook.html)
 
 ### Code阅读方法
