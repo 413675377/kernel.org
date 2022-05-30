@@ -1,3 +1,4 @@
+```
 #!/bin/sh
 
 #Download resource
@@ -123,3 +124,4 @@ mosudo unt /dev/loop16p1 /mnt                                # 挂载块设备�
 sudo cp boot.scr zImage vexpress-v2p-ca9.dtb /mnt            # 复制到 第一分区 
 sudo umount /mnt   
 AutoBoot
+```
