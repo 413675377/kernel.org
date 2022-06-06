@@ -16,6 +16,7 @@ $ tree kernel.org/
 ├── [DriverPorting.md](DriverPorting.md)   
 ├── [ALSA.md](ALSA.md)   
 ├── [ALSA: AudioDriver](AudioDriver.html)     
+├── [I2C_sfs.md](I2C_sfs.md)   
 ├── [I2C_Client.md](I2C_Client.md)   
 ├── [Input.md](Input.md)     
 ├── [run.sh](run.md)     
